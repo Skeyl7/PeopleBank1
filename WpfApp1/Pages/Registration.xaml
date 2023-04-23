@@ -1,0 +1,50 @@
+﻿<Page x:Class="PeopleBank.Pages.Registration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PeopleBank.Pages"
+      mc:Ignorable="d" 
+     d:DesignHeight="1024" d:DesignWidth="1440"
+     
+   
+  Style= "{DynamicResource StyleForRegistrationPages}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="500" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="400" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+<Image Source="/3124.png" Grid.Row="1"/>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+
+            <Rectangle Style="{DynamicResource RectStyle}" Grid.RowSpan="5"/>
+
+            <TextBlock Text="Регистрация" Style="{DynamicResource TextBlockStyleTitle}" VerticalAlignment="Center"/>
+
+            <TextBox Style= "{DynamicResource TextBoxStyle}" Tag="Введите логин" Margin="30,20,30,20" x:Name="LoginTB" Grid.Row="1" />
+
+            <TextBox Style= "{DynamicResource TextBoxStyle}" Tag="Введите пароль" Margin="30,20,30,20" x:Name="PasswordTB" Grid.Row="2" />
+
+            <TextBox Style= "{DynamicResource TextBoxStyle}" Tag="Пароль ещё раз" Grid.Row="3" x:Name="ConfirmPasswordTB" Margin="30,20,30,20"/>
+            <Label Grid.Row="5" Name="ErrorLabel"/>
+            <Button Style= "{DynamicResource ButtonStyle}"  Content="Регистрация" Click="RegisterButton_Click" Grid.Column="1" Margin="30,20,30,20" Grid.Row="4" />
+            
+        </Grid>
+    </Grid>
+</Page>
