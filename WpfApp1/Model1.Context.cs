@@ -29,10 +29,5 @@ namespace PeopleBank
         public virtual DbSet<People> People { get; set; }
         public virtual DbSet<Status> Status { get; set; }
         public virtual DbSet<Users> Users { get; set; }
-
-        public static implicit operator PeopleBank1Entities(People v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

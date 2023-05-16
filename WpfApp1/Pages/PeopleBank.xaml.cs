@@ -25,7 +25,6 @@ namespace PeopleBank.Pages
             InitializeComponent();
             MainDataGrid.ItemsSource = PeopleBankDB.Context.People.ToList().Select(x => new
             {
-
                 Surname = x.Surname,
                 Name = x.Name,
                 Patronymic = x.Panronymic,
@@ -35,8 +34,12 @@ namespace PeopleBank.Pages
                 Gender = x.Gender,
                 Phone = x.PhoneNumber,
                 Status = x.Status,
-
+                Street = x.Street,
+                Building = x.Building,
+                flat = x.flat,
+                Photo = $"/Photos/{x.Photo ?? "default.png"}"
             }).ToList();
         }
     }
 }
+

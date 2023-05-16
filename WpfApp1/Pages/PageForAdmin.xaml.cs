@@ -26,13 +26,18 @@ namespace PeopleBank.Pages
         }
         private void Bank_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Bank());
+            NavigationService.Navigate(new PageForPeople());
         }
 
         private void EditBank_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new EditBank());
+             NavigationService.Navigate(new EditBank());
+        }
+        private void EditStatus_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new EditStatus());
         }
     }
+
 
 }

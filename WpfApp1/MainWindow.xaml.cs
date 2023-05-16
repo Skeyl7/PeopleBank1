@@ -48,18 +48,29 @@ namespace PeopleBank
             {
                 MainFrame.Navigate(new Authorization());
             }
-            else if (MainFrame.Content is Bank)
-            {
-                MainFrame.Navigate(new Authorization());
-            }
+        
             else if (MainFrame.Content is EditBank)
             {
-                MainFrame.Navigate(new Authorization());
+                MainFrame.Navigate(new PageForAdmin());
             }
             else if (MainFrame.Content is PageForPeople )
             {
                 MainFrame.Navigate(new Authorization());
             }
+            else if (MainFrame.Content is EditCity)
+            {
+                MainFrame.Navigate(new PageForAdmin());
+            }
+            else if (MainFrame.Content is EditStatus)
+            {
+                MainFrame.Navigate(new PageForAdmin());
+            }
+            
+            else if (MainFrame.Content is CityPage)
+            {
+                MainFrame.Navigate(new EditStatus());
+            }
+            
 
         }
 

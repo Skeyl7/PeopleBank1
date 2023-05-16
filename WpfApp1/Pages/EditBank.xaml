@@ -6,8 +6,6 @@
       xmlns:local="clr-namespace:PeopleBank.Pages"
       mc:Ignorable="d" 
      d:DesignHeight="1024" d:DesignWidth="1440"
-     
-   
   Style= "{DynamicResource StyleForRegistrationPages}">
 
     <Grid>
@@ -45,19 +43,20 @@
         <TextBlock Text="Квартира" Grid.Row="11" Grid.Column="0" FontSize="22" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Width="160"/>
         <TextBlock Text="Фото" Grid.Row="12" Grid.Column="0" FontSize="22" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Width="160"/>
 
-        <TextBox Name="SurnameTB" Grid.Row="0" Grid.Column="1" Width="300" Height="75" Text="{Binding Surname}"/>
-        <TextBox Name="NameTB" Grid.Row="1" Grid.Column="1" Width="300" Height="75" Text="{Binding Name}"/>
-        <TextBox Name="PatronymicTB" Grid.Row="2" Grid.Column="1" Width="300" Height="75" Text="{Binding Panronymic}"/>
-        <TextBox Name="PassportTB" Grid.Row="3" Grid.Column="1" Width="300" Height="75" Text="{Binding Passport}"/>
-        <TextBox Name="BirthDateTB" Grid.Row="4" Grid.Column="1" Width="300" Height="75" Text="{Binding BirthDate}"/>
-        <TextBox Name="GenderTB" Grid.Row="5" Grid.Column="1" Width="300" Height="75" Text="{Binding Gender}"/>
-        <TextBox Name="PhoneNumberTB" Grid.Row="6" Grid.Column="1" Width="300" Height="75" Text="{Binding PhoneNumber}"/>
-        <TextBox Name="StatusTB" Grid.Row="7" Grid.Column="1" Width="300" Height="75" Text="{Binding Status}"/>
-        <TextBox Name="CityTB" Grid.Row="8" Grid.Column="1" Width="300" Height="75" Text="{Binding City}"/>
-        <TextBox Name="StreetTB" Grid.Row="9" Grid.Column="1" Width="300" Height="75" Text="{Binding Street}"/>
-        <TextBox Name="BuildingTB" Grid.Row="10" Grid.Column="1" Width="300" Height="75" Text="{Binding Building}"/>
-        <TextBox Name="FlatTB" Grid.Row="11" Grid.Column="1" Width="300" Height="75" Text="{Binding Flat}"/>
-        <TextBox Name="PhotoTB" Grid.Row="12" Grid.Column="1" Width="300" Height="75" Text="{Binding Photo}"/>
+        <TextBox  Grid.Row="0" Grid.Column="1" Width="300" Height="75" Text="{Binding Surname}" />
+        <TextBox  Grid.Row="1" Grid.Column="1" Width="300" Height="75"  Text="{Binding Name}" />
+        <TextBox Grid.Row="2" Grid.Column="1" Width="300" Height="75"  Text="{Binding Panronymic}" />
+        <TextBox  Grid.Row="3" Grid.Column="1" Width="300" Height="75"  Text="{Binding PassportData}" />
+        <TextBox  Grid.Row="4" Grid.Column="1" Width="300" Height="75"  Text="{Binding BirthDate}" />
+        <ComboBox x:Name="GenderCB" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Width="300" Height="75" Text="{Binding Gender}" />
+        <TextBox  Grid.Row="6" Grid.Column="1" Width="300" Height="75"  Text="{Binding PhoneNumber}" />
+        <ComboBox Name="StatusB" Grid.Row="7" Grid.Column="1" Width="300" Height="75"  Text="{Binding Status.Name}" />
+        <ComboBox Name="CityCB" Grid.Row="8" Grid.Column="1" Width="300" Height="75"  Text="{Binding City.Name}"/>
+        <TextBox  Grid.Row="9" Grid.Column="1" Width="300" Height="75"  Text="{Binding Street}" />
+        <TextBox Grid.Row="10" Grid.Column="1" Width="300" Height="75"  Text="{Binding Building}" />
+        <TextBox  Grid.Row="11" Grid.Column="1" Width="300" Height="75"  Text="{Binding flat}" />
+        <TextBox  Grid.Row="12" Grid.Column="1" Width="300" Height="75"  Text="{Binding Photo}" />
         <Button Grid.Row="14" Grid.Column="1" Width="300" Height="75" Content="Сохранить" x:Name="Save" Click="Save_Click"/>
+        
     </Grid>
 </Page>

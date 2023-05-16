@@ -5,7 +5,6 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PeopleBank.Pages"
       mc:Ignorable="d" 
-     
      d:DesignHeight="1024" d:DesignWidth="1440"
      
    
@@ -20,7 +19,7 @@
         <TextBlock Text="Информация о студентах" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <DataGrid Name="MainDataGrid" AutoGenerateColumns="False" Grid.Row="1" Margin="5">
             <DataGrid.Columns >
-
+               
                 <DataGridTextColumn Header="Фамилия" Binding="{Binding Surname}" Width="*"/>
                 <DataGridTextColumn Header="Имя" Binding="{Binding Name}" Width="*"/>
                 <DataGridTextColumn Header="Отчество" Binding="{Binding Patronymic}" Width="*"/>
@@ -29,8 +28,16 @@
                 <DataGridTextColumn Header="Пол" Binding="{Binding Gender}" Width="*"/>
                 <DataGridTextColumn Header="Номер телефона" Binding="{Binding Phone}" Width="*"/>
                 <DataGridTextColumn Header="Соц.статус" Binding="{Binding Status.Name}" Width="*"/>
-                <DataGridTextColumn Header="Город" Binding="{Binding Cities.Name}" Width="*"/>
-
+                <DataGridTextColumn Header="Улица" Binding="{Binding Street}" Width="*"/>
+                <DataGridTextColumn Header="Дом" Binding="{Binding Building}" Width="*"/> 
+                <DataGridTextColumn Header="Квартриа" Binding="{Binding flat}" Width="*"/>
+                <DataGridTemplateColumn Header="Фотография" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Photo}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
